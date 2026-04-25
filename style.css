@@ -1,36 +1,39 @@
-/* ===== FOOTER: 20px FROM LEFT, ALL CONTENT VISIBLE ===== */
 body { 
     font-family: Arial, sans-serif; 
     margin: 0; 
     background-color: #ffffff; 
-    padding-bottom: 80px;  /* CRITICAL: stops footer from hiding content */
+    padding-bottom: 80px;  
 }
 
 footer { 
     background-color: #f8f8f8d3; 
-    color: #000000; 
-    text-align: left;       /* was right/center */
+    color: #000; 
     font-size: 14px; 
-    padding: 15px 20px 15px 20px;  /* top right bottom LEFT */
+    padding: 15px 0; 
     position: fixed; 
     bottom: 0; 
     left: 0; 
     width: 100%; 
     border-top: 1px solid #ddd;
     box-sizing: border-box;
-    z-index: 100;
 }
 
-/* ===== MAKE SURE NAV BARS ARE VISIBLE ===== */
-nav, .navbar {
-    position: relative;     /* not fixed */
-    z-index: 50;           /* stays above content but below footer */
-    margin-bottom: 20px;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;           
+    padding: 0 20px;         
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
 }
 
-/* ===== MAIN CONTENT NOT EDGE-TO-EDGE ===== */
-main, section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1100px;     /* keeps everything centered and visible */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: auto;
 }

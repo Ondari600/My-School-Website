@@ -1,48 +1,168 @@
-img { 
-    max-width: 75%;     
-    height: auto; 
-    display: block;    
-    margin: 20px auto;  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 80px; 
+    background-color: rgb(255, 255, 255);
 }
 
-header .header-content img { 
-    width: 75%; 
-    height: auto;
-    display: block; 
-    margin: 10px auto; 
-    background: rgba(206, 207, 162, 0.523); 
-    padding: 20px; 
-    border-radius: 10px; 
-}
-
-body { 
-    font-family: Arial, sans-serif; 
-    margin: 0; 
-    background-color: rgb(255, 255, 255); 
-    padding-bottom: 80px;  
-}
-
-.contact-form { 
-    max-width: 400px; 
-    margin: 30px auto;  
-    padding: 20px;      
-    background: #f9f9f9;
+h1 {
+    color: #106b10c9;
     border-radius: 10px;
+    text-indent: 80px;
+    background-color: #dbdbb9c1;
+    font-size: 18px;
+    padding: 10px;
 }
 
-footer { 
-    background-color: #f8f8f8d3; 
-    color: rgb(0, 0, 0); 
-    text-align: center;  
-    font-size: 16px; 
-    padding: 15px 20px; 
-    position: fixed; 
-    border-top-left-radius: 10px; 
-    border-top-right-radius: 10px; 
-    width: 100%; 
-    border-top: 1px solid #ffffffc6; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
-    box-sizing: border-box;
+img {
+    max-width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 18px;
 }
+
+p {
+    font-size: 18px;
+    text-align: block;
+    text-indent: 40px;
+    background-color: none;
+}
+
+.navbar {
+    background: rgb(143, 175, 153);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+nav a {
+    color: rgba(238, 237, 237, 0.983);
+    border-radius: 10px;
+    background-color: rgb(156, 159, 68);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: #c25252;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: #a9a1168c;
+    border: rgb(99, 45, 45);
+    border-radius: 10px;
+    color: rgb(251, 248, 248);
+    padding: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(144, 150, 92);
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgb(255, 255, 255);
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: #f9f9f9;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header {
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #eff3ef;
+    padding: 20px 20px; 
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .header-content img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 10px;
+    background: rgba(206, 207, 162, 0.523);
+    padding: 20px;
+    border-radius: 1px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+section {
+    padding: 30px;
+    margin: 10px;
+    background-color: #b8d3c5;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #f8f8f8d3;
+    color: rgb(0, 0, 0);
+    text-align: right;
+    font-size: 18px;
+    padding: 10px 0;
+    position: fixed;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    border-top: 1px solid #ffffffc6;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffffdc;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav a {
+        display: block;
+        width: 90%;
+        text-align: center;
+    }

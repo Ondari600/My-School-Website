@@ -1,46 +1,112 @@
-/* HEADER - Maximized to cover the whole area */
-header { 
-    background-image: url('images/banner.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-color: #eff3ef; 
-    padding: 0; /* Removed padding so image touches the edges */
-    border-radius: 10px; 
-    margin: 10px; 
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 0px;
+    background-color: #fff;
+}
+
+h1 {
+    color: #106b10c9;
+    border-radius: 10px;
+    text-indent: 80px;
+    background-color: #dbdbb9c1;
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+header {
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Ensures the image stays inside the rounded corners */
 }
 
-header .header-content {
-    width: 100%; /* Ensures the content container spans the whole bar */
-    text-align: center;
+header .header-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
 }
 
-header .header-content img { 
-    display: block; 
-    width: 100%; /* Maximizes image to cover the full width */
-    height: auto; 
-    max-width: none; /* Removes the 800px/1000px limit */
-    margin: 0; 
-    padding: 0; 
-    border-radius: 0; /* Image now fills the header area completely */
+.logo {
+    width: 80px;
+    height: auto;
+    font-weight: bold;
 }
 
-/* Fix for Footer Text - Inside and visible */
-footer { 
-    background-color: #f8f8f8d3; 
-    color: rgb(0, 0, 0); 
-    text-align: right; 
-    font-size: 18px; 
-    padding: 10px 40px; /* High horizontal padding to keep text away from corners */
-    position: fixed; 
-    border-top-left-radius: 10px; 
-    border-top-right-radius: 10px; 
-    width: 100%; 
-    border-top: 1px solid #ffffffc6; 
-    left: 0; 
-    bottom: 0; 
-    box-sizing: border-box; 
+nav {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+nav a {
+    color: rgba(238, 237, 237, 0.983);
+    border-radius: 10px;
+    background-color: rgb(156, 159, 68);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px;
+}
+
+nav a:hover, .nav a.bar-active {
+    background-color: #c25252;
+    color: #fff;
+    text-decoration: underline;
+}
+
+section {
+    padding: 30px;
+    margin: 10px;
+    background-color: #b8d3c5;
+    border-radius: 8px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #885858;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #5d7912c9;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f8f8f8d3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(144, 150, 92);
+    box-shadow: 0px 4px 8px #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
 }

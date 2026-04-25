@@ -1,8 +1,10 @@
+/* GLOBAL STYLES */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding-top: 0px;
-    padding-bottom: 80px; 
+    /* Added space at bottom so fixed footer doesn't cover contact info */
+    padding-bottom: 200px; 
     background-color: rgb(255, 255, 255);
 }
 
@@ -29,6 +31,7 @@ p {
     background-color: none;
 }
 
+/* NAVIGATION */
 .navbar {
     background: rgb(143, 175, 153);
     padding: 15px;
@@ -96,12 +99,14 @@ nav a:hover {
     display: block;
 }
 
+/* HEADER - Image bar shifted up */
 header {
     background-image: url('images/banner.jpg');
     background-size: cover;
     background-position: center;
     background-color: #eff3ef;
-    padding: 20px 20px; 
+    /* Reduced padding to move the school image bar up */
+    padding: 5px 5px; 
     border-radius: 10px;
     margin: 10px;
     display: flex;
@@ -126,6 +131,7 @@ header .header-content img {
     margin-right: 20px;
 }
 
+/* SECTIONS */
 section {
     padding: 30px;
     margin: 10px;
@@ -138,6 +144,7 @@ ul {
     padding-left: 20px;
 }
 
+/* FOOTER - Fixed at bottom */
 footer {
     background-color: #f8f8f8d3;
     color: rgb(0, 0, 0);
@@ -156,6 +163,7 @@ footer {
     z-index: 5;
 }
 
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -166,3 +174,4 @@ footer {
         width: 90%;
         text-align: center;
     }
+}
